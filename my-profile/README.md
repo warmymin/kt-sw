@@ -1,36 +1,86 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 📔 오늘의 하루 일기장
 
-## Getting Started
+Next.js와 Supabase로 만든 개인 일기장 웹 애플리케이션입니다.
 
-First, run the development server:
+## ✨ 주요 기능
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- 🔐 **회원가입/로그인** - Supabase 인증
+- 📝 **일기 작성** - 오늘의 기분과 날씨 기록
+- 💬 **응원 메시지** - 다른 사용자들과 소통
+- 👤 **프로필 관리** - 개인정보 설정
+- 🌙 **반응형 UI** - 모바일/데스크톱 지원
+
+## 🛠 기술 스택
+
+- **Frontend**: Next.js 15 (App Router), React, Tailwind CSS
+- **Backend**: Supabase (인증 + 데이터베이스)
+- **배포**: Vercel (권장)
+
+## 🚀 로컬 실행 방법
+
+1. **저장소 클론**
+   ```bash
+   git clone https://github.com/warmymin/kt-sw.git
+   cd kt-sw
+   ```
+
+2. **의존성 설치**
+   ```bash
+   npm install
+   ```
+
+3. **환경변수 설정**
+   ```bash
+   cp .env.example .env.local
+   # .env.local 파일에서 Supabase 설정값 입력
+   ```
+
+4. **Supabase 데이터베이스 설정**
+   - Supabase 대시보드에서 SQL 실행:
+   ```sql
+   -- complete-setup.sql 파일의 내용 실행
+   ```
+
+5. **개발 서버 실행**
+   ```bash
+   npm run dev
+   ```
+
+6. **브라우저에서 확인**
+   - http://localhost:3002
+
+## 📱 스크린샷
+
+- 일기 목록 화면
+- 일기 작성 화면  
+- 개별 일기 조회 화면
+
+## 🔧 주요 파일 구조
+
+```
+├── src/
+│   ├── app/                 # Next.js App Router
+│   │   ├── auth/           # 인증 페이지
+│   │   ├── posts/          # 일기 관련 페이지
+│   │   └── profile/        # 프로필 페이지
+│   ├── contexts/           # React Context
+│   └── lib/                # 유틸리티 함수
+├── *.sql                   # Supabase 데이터베이스 스키마
+└── README.md
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🤝 기여하기
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📄 라이선스
 
-## Learn More
+이 프로젝트는 MIT 라이선스 하에 배포됩니다.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+💝 **오늘 하루도 수고하셨어요! 소중한 추억을 기록해보세요.**
